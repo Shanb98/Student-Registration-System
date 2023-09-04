@@ -29,4 +29,31 @@ public class StudentPortalServiceImpl implements StudentPortalService{
     public Iterable<StudentPortalEntity> retrieveStudentPortalByUserName(String userName){
         return repository.findAllByUserName(userName);
     }
+
+
+
+    @Override
+    public void updateStudentPortalById(Long id, StudentPortal request) {
+        StudentPortalEntity existingStudentPortal = repository.findById(id).get();
+
+        existingStudentPortal.setFormFullName(request.getFormFullName());
+        existingStudentPortal.setFormEmail(request.getFormEmail());
+        existingStudentPortal.setFormPhone(request.getFormPhone());
+        existingStudentPortal.setFormBirthday(request.getFormBirthday());
+        existingStudentPortal.setFormNic(request.getFormNic());
+        existingStudentPortal.setFormGender(request.getFormGender());
+        existingStudentPortal.setFormAddress(request.getFormAddress());
+        existingStudentPortal.setFormCity(request.getFormCity());
+        existingStudentPortal.setFormZipcode(request.getFormZipcode());
+        existingStudentPortal.setFormRegistrationNumber(request.getFormRegistrationNumber());
+        existingStudentPortal.setFormFaculty(request.getFormFaculty());
+        existingStudentPortal.setFormSpecialization(request.getFormSpecialization());
+        existingStudentPortal.setFormYear(request.getFormYear());
+        existingStudentPortal.setFormSemester(request.getFormSemester());
+
+        repository.save(existingStudentPortal);
+
+    }
+
+
 }

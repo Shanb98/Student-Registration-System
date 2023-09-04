@@ -26,7 +26,11 @@ public class StudentPortalController {
         @PathVariable String userName){
 
         return studentPortalService.retrieveStudentPortalByUserName(userName);
-
-
     }
+    @PutMapping("/{id}")
+    public void updateStudentPortalById(@PathVariable Long id, @RequestBody StudentPortal request) {
+        studentPortalService.updateStudentPortalById(id, request);
+    }
+
+
 }
