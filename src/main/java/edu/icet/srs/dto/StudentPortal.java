@@ -28,4 +28,12 @@ public class StudentPortal {
     private String formSpecialization;
     private String formYear;
     private String formSemester;
+
+    private String adminName;
+    private String adminUserName;
+    private String adminDesignation;
+    private String adminEmployeeId;
+    private String adminEmail;
+    private String adminFaculty;
+    private String adminPassword;
 }

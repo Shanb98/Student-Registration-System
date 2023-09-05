@@ -32,5 +32,14 @@ public class StudentPortalController {
         studentPortalService.updateStudentPortalById(id, request);
     }
 
+    @PostMapping("/admin")
+    public void setAdminPortal(@RequestBody StudentPortal studentPortal){
+        studentPortalService.setAdminPortal(studentPortal);
+    }
+    @GetMapping("/admin/{adminUserName}")
+    Iterable<StudentPortalEntity> retrieveAdminByUserName(
+            @PathVariable String adminUserName){
 
+        return studentPortalService.retrieveAdminByUserName(adminUserName);
+    }
 }

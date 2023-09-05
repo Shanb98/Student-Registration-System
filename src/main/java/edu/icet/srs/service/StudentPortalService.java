@@ -7,8 +7,8 @@ public interface StudentPortalService {
     void setStudentPortal(StudentPortal studentPortal);
     Iterable<StudentPortalEntity>getStudentPortal();
     public Iterable<StudentPortalEntity> retrieveStudentPortalByUserName(String userName);
-
     public  void updateStudentPortalById(Long id, StudentPortal request);
-
+    void setAdminPortal(StudentPortal studentPortal);
+    public Iterable<StudentPortalEntity> retrieveAdminByUserName(String adminUserName);
 
 }

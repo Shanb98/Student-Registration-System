@@ -11,6 +11,6 @@ public interface StudentPortalRepository
 
     Iterable<StudentPortalEntity> findAllByUserName(String userName);
     Optional<StudentPortalEntity> findById(Long id);
-
+    Iterable<StudentPortalEntity> findAllByAdminUserName(String adminUserName);
 
 }

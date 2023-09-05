@@ -25,13 +25,10 @@ public class StudentPortalServiceImpl implements StudentPortalService{
     public Iterable<StudentPortalEntity> getStudentPortal() {
         return repository.findAll();
     }
-
+    @Override
     public Iterable<StudentPortalEntity> retrieveStudentPortalByUserName(String userName){
         return repository.findAllByUserName(userName);
     }
-
-
-
     @Override
     public void updateStudentPortalById(Long id, StudentPortal request) {
         StudentPortalEntity existingStudentPortal = repository.findById(id).get();
@@ -54,6 +51,22 @@ public class StudentPortalServiceImpl implements StudentPortalService{
         repository.save(existingStudentPortal);
 
     }
+    @Override
+    public void setAdminPortal(StudentPortal studentPortal) {
+        StudentPortalEntity adminPortalEntity = new StudentPortalEntity();
+        adminPortalEntity.setAdminName(studentPortal.getAdminName());
+        adminPortalEntity.setAdminUserName(studentPortal.getAdminUserName());
+        adminPortalEntity.setAdminDesignation(studentPortal.getAdminDesignation());
+        adminPortalEntity.setAdminEmployeeId(studentPortal.getAdminEmployeeId());
+        adminPortalEntity.setAdminEmail(studentPortal.getAdminEmail());
+        adminPortalEntity.setAdminFaculty(studentPortal.getAdminFaculty());
+        adminPortalEntity.setAdminPassword(studentPortal.getAdminPassword());
+        repository.save(adminPortalEntity);
 
+    }
+    @Override
+    public Iterable<StudentPortalEntity> retrieveAdminByUserName(String adminUserName) {
+        return repository.findAllByAdminUserName(adminUserName);
+    }
 
 }
