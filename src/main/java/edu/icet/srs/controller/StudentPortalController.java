@@ -42,4 +42,10 @@ public class StudentPortalController {
 
         return studentPortalService.retrieveAdminByUserName(adminUserName);
     }
+    @GetMapping("/form/{formFullName}")
+    Iterable<StudentPortalEntity> retrieveByFormFullName(
+            @PathVariable String formFullName){
+
+        return studentPortalService.retrieveByFormFullName(formFullName);
+    }
 }

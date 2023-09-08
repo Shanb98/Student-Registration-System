@@ -10,5 +10,6 @@ public interface StudentPortalService {
     public  void updateStudentPortalById(Long id, StudentPortal request);
     void setAdminPortal(StudentPortal studentPortal);
     public Iterable<StudentPortalEntity> retrieveAdminByUserName(String adminUserName);
+    public Iterable<StudentPortalEntity> retrieveByFormFullName(String formFullName);
 
 }

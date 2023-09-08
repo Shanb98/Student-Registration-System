@@ -47,3 +47,5 @@ w
 G.idea/sonarlint/issuestore/4/f/4fca15932b6169d9fade2192e0263ddc12700e9b,9\b\9b16852efe22ab833c5137f626282c84ea997cd7
 Å
 Q.idea/sonarlint/securityhotspotstore/c/0/c0866009483f84022713b8281bacacf23b74445d,6\d\6d7c381ce2f78573145fd16f795cd1c78f336b63
+Y
+)src/main/java/edu/icet/srs/Configure.java,a\8\a84d76486ce4865388258bfa0f4985e5ac848595

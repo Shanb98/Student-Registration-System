@@ -69,4 +69,9 @@ public class StudentPortalServiceImpl implements StudentPortalService{
         return repository.findAllByAdminUserName(adminUserName);
     }
 
+    @Override
+    public Iterable<StudentPortalEntity> retrieveByFormFullName(String formFullName) {
+        return repository.findAllByFormFullName(formFullName);
+    }
+
 }
