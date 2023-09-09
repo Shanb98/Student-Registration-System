@@ -48,4 +48,9 @@ public class StudentPortalController {
 
         return studentPortalService.retrieveByFormFullName(formFullName);
     }
+    @DeleteMapping("/delete/{id}")
+    public String deleteStudent(@PathVariable Long id){
+        return studentPortalService.deleteStudent(id);
+    }
+
 }

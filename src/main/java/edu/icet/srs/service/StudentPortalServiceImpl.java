@@ -74,4 +74,10 @@ public class StudentPortalServiceImpl implements StudentPortalService{
         return repository.findAllByFormFullName(formFullName);
     }
 
+    @Override
+    public String deleteStudent(Long id) {
+        repository.deleteById(id);
+        return "Deleted";
+    }
+
 }
