@@ -12,4 +12,5 @@ public interface StudentPortalService {
     public Iterable<StudentPortalEntity> retrieveAdminByUserName(String adminUserName);
     public Iterable<StudentPortalEntity> retrieveByFormFullName(String formFullName);
     public String deleteStudent(Long id);
+    public void updateImgById(Long id, StudentPortal img);
 }

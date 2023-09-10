@@ -1,5 +1,6 @@
 package edu.icet.srs.dto;
 
+import jakarta.persistence.Lob;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -36,4 +37,6 @@ public class StudentPortal {
     private String adminEmail;
     private String adminFaculty;
     private String adminPassword;
-}
+
+    @Lob
+    private byte[] imgData;}

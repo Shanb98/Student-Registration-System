@@ -49,7 +49,6 @@ public class StudentPortalServiceImpl implements StudentPortalService{
         existingStudentPortal.setFormSemester(request.getFormSemester());
 
         repository.save(existingStudentPortal);
-
     }
     @Override
     public void setAdminPortal(StudentPortal studentPortal) {
@@ -78,6 +77,13 @@ public class StudentPortalServiceImpl implements StudentPortalService{
     public String deleteStudent(Long id) {
         repository.deleteById(id);
         return "Deleted";
+    }
+
+    @Override
+    public void updateImgById(Long id , StudentPortal img) {
+        StudentPortalEntity imgPortalEntity = repository.findById(id).get();
+        imgPortalEntity.setImgData(img.getImgData());
+        repository.save(imgPortalEntity);
     }
 
 }

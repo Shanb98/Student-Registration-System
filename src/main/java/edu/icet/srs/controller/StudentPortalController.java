@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @CrossOrigin
 @RequestMapping("/StudentPortal")
+
 public class StudentPortalController {
     @Autowired
     StudentPortalService studentPortalService;
@@ -52,5 +53,8 @@ public class StudentPortalController {
     public String deleteStudent(@PathVariable Long id){
         return studentPortalService.deleteStudent(id);
     }
-
+    @PutMapping("image/{id}")
+    public void updateImgById(@PathVariable Long id, @RequestBody StudentPortal img) {
+        studentPortalService.updateStudentPortalById(id, img);
+    }
 }
